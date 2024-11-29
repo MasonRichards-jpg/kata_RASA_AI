@@ -11,20 +11,33 @@ intents:
   - search_flight 
 
 entities:
-  - departure_city
-  - arrival_city
+  - departure_id
+  - arrival_id
   - outbound_date
   - return_date
 
+
 slots:
-  departure_city:
+  departure_id:
     type: text
-  arrival_city:
+    mappings:
+      - type: from_entity
+        entity: departure_id
+  arrival_id:
     type: text
+    mappings:
+      - type: from_entity
+        entity: arrival_id
   outbound_date:
     type: text
+    mappings:
+      - type: from_entity
+        entity: outbound_date
   return_date:
     type: text
+    mappings:
+      - type: from_entity
+        entity: return_date
 
 responses:
   utter_greet:
