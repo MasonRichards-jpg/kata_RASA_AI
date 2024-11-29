@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: search for flight
+  steps:
+    - intent: search_flight  # User intent to search for a flight
+    - action: action_get_flight

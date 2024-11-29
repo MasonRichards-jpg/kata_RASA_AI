@@ -17,6 +17,12 @@ nlu:
     - goodevening
     - good afternoon
 
+- intent: search_flight
+  examples: |
+    - I want to book a flight
+    - Show me flights from Beijing to Austin
+    - Find a flight to Austin
+
 - intent: goodbye
   examples: |
     - cu
