@@ -1,104 +1,210 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-
-
-
 - intent: search_flight
   examples: |
     - I want to book a flight from [JFK](departure_id) to [LAX](arrival_id) on [2024-12-01](outbound_date) returning on [2024-12-10](return_date)
-    - Show me flights from [ATL](departure_id) to [ORD](arrival_id) leaving [2024-11-30](outbound_date) coming back on [2024-12-05](return_date)
-    - Find round-trip flights from [SFO](departure_id) to [MIA](arrival_id) departing [2024-12-05](outbound_date) and returning [2024-12-12](return_date)
-    - I need a flight from [LGA](departure_id) to [DFW](arrival_id) on [2024-12-15](outbound_date) with a return on [2024-12-20](return_date)
-    - Book me a flight from [PEK](departure_id) to [AUS](arrival_id) leaving [2024-11-30](outbound_date) and back on [2024-12-06](return_date)
+    - Show me flights from [ATL](departure_id) to [ORD](arrival_id) leaving on [2024-11-30](outbound_date) and coming back on [2024-12-07](return_date)
+    - Find flights from [SFO](departure_id) to [MIA](arrival_id) departing [2024-12-05](outbound_date) and returning [2024-12-12](return_date)
+    - Can you get me a flight from [LGA](departure_id) to [DFW](arrival_id) on [2024-12-15](outbound_date) returning [2024-12-22](return_date)
+    - Book a round-trip flight from [PEK](departure_id) to [AUS](arrival_id) leaving [2024-11-30](outbound_date) and back on [2024-12-06](return_date)
+    - Need a flight from [NRT](departure_id) to [LAX](arrival_id) on [2024-12-01](outbound_date) coming back on [2024-12-08](return_date)
+    - I need a flight from [HND](departure_id) to [JFK](arrival_id) departing on [2024-11-30](outbound_date) and returning on [2024-12-07](return_date)
+    - Flights from [KIX](departure_id) to [SFO](arrival_id) leaving [2024-12-05](outbound_date) and returning [2024-12-12](return_date)
+    - Looking for flights from [CDG](departure_id) to [LHR](arrival_id) on [2024-12-10](outbound_date) returning [2024-12-15](return_date)
+    - Any flights from [SYD](departure_id) to [AKL](arrival_id) on [2024-12-20](outbound_date) coming back on [2024-12-27](return_date)
+    - Get me flights from [DXB](departure_id) to [SIN](arrival_id) departing [2024-12-25](outbound_date) and returning [2025-01-02](return_date)
+    - I want to fly from [FRA](departure_id) to [AMS](arrival_id) on [2024-12-08](outbound_date) and back on [2024-12-15](return_date)
+    - Is there a flight from [MEX](departure_id) to [YYZ](arrival_id) leaving [2024-12-15](outbound_date) and returning [2024-12-22](return_date)
+    - Find flights from [GRU](departure_id) to [EZE](arrival_id) departing [2024-12-18](outbound_date) and returning [2024-12-25](return_date)
+    - Search for flights from [HKG](departure_id) to [BKK](arrival_id) on [2024-12-22](outbound_date) and back on [2024-12-29](return_date)
+    - I need to travel from [JNB](departure_id) to [CAI](arrival_id) leaving [2024-12-05](outbound_date) and returning [2024-12-12](return_date)
+    - Show flights from [ICN](departure_id) to [NRT](arrival_id) on [2024-12-03](outbound_date) and returning [2024-12-10](return_date)
+    - Book me a flight from [SVO](departure_id) to [IST](arrival_id) departing [2024-12-12](outbound_date) and returning [2024-12-19](return_date)
+    - Any flights from [LHR](departure_id) to [JFK](arrival_id) on [2024-12-01](outbound_date) returning [2024-12-08](return_date)
+    - Need a flight from [LAX](departure_id) to [LAS](arrival_id) on [2024-12-02](outbound_date) coming back on [2024-12-09](return_date)
+    - I want a flight from [MIA](departure_id) to [ORD](arrival_id) leaving [2024-12-03](outbound_date) and returning [2024-12-10](return_date)
+    - Find me flights from [SEA](departure_id) to [DEN](arrival_id) departing [2024-12-04](outbound_date) returning [2024-12-11](return_date)
+    - Any available flights from [BOS](departure_id) to [PHX](arrival_id) on [2024-12-05](outbound_date) returning [2024-12-12](return_date)
+    - Look up flights from [MSP](departure_id) to [DTW](arrival_id) leaving [2024-12-06](outbound_date) and coming back on [2024-12-13](return_date)
+    - I need to go from [SLC](departure_id) to [CLT](arrival_id) on [2024-12-07](outbound_date) returning [2024-12-14](return_date)
+    - Show me flights from [MCO](departure_id) to [IAH](arrival_id) departing [2024-12-08](outbound_date) and returning [2024-12-15](return_date)
+    - Can you find flights from [PHL](departure_id) to [SAN](arrival_id) on [2024-12-09](outbound_date) coming back on [2024-12-16](return_date)
+    - Book flights from [BWI](departure_id) to [TPA](arrival_id) leaving [2024-12-10](outbound_date) and returning [2024-12-17](return_date)
+    - Need tickets from [MDW](departure_id) to [FLL](arrival_id) on [2024-12-11](outbound_date) returning [2024-12-18](return_date)
+    - Get me a flight from [DCA](departure_id) to [PDX](arrival_id) departing [2024-12-12](outbound_date) and returning [2024-12-19](return_date)
 
+- regex: airport_code
+  examples: |
+    - [A-Z]{3}
 
+- lookup: departure_id
+  examples: |
+    - JFK
+    - LAX
+    - ATL
+    - ORD
+    - SFO
+    - MIA
+    - LGA
+    - DFW
+    - PEK
+    - AUS
+    - NRT
+    - HND
+    - KIX
+    - CDG
+    - LHR
+    - SYD
+    - AKL
+    - DXB
+    - SIN
+    - FRA
+    - AMS
+    - MEX
+    - YYZ
+    - GRU
+    - EZE
+    - HKG
+    - BKK
+    - JNB
+    - CAI
+    - ICN
+    - SVO
+    - IST
+    - LAS
+    - SEA
+    - DEN
+    - BOS
+    - PHX
+    - MSP
+    - DTW
+    - SLC
+    - CLT
+    - MCO
+    - IAH
+    - PHL
+    - SAN
+    - BWI
+    - TPA
+    - MDW
+    - FLL
+    - DCA
+    - PDX
+
+- lookup: arrival_id
+  examples: |
+    - JFK
+    - LAX
+    - ATL
+    - ORD
+    - SFO
+    - MIA
+    - LGA
+    - DFW
+    - PEK
+    - AUS
+    - NRT
+    - HND
+    - KIX
+    - CDG
+    - LHR
+    - SYD
+    - AKL
+    - DXB
+    - SIN
+    - FRA
+    - AMS
+    - MEX
+    - YYZ
+    - GRU
+    - EZE
+    - HKG
+    - BKK
+    - JNB
+    - CAI
+    - ICN
+    - SVO
+    - IST
+    - LAS
+    - SEA
+    - DEN
+    - BOS
+    - PHX
+    - MSP
+    - DTW
+    - SLC
+    - CLT
+    - MCO
+    - IAH
+    - PHL
+    - SAN
+    - BWI
+    - TPA
+    - MDW
+    - FLL
+    - DCA
+    - PDX
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
     - bye
     - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
     - see you later
+    - talk to you soon
+    - catch you later
 
 - intent: affirm
   examples: |
     - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - yeah
+    - sure
+    - absolutely
+    - definitely
 
 - intent: deny
   examples: |
     - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
+    - nope
     - not really
+    - I don't think so
+    - negative
 
-- intent: mood_great
+- intent: stop
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - stop
+    - cancel
+    - never mind
+    - forget it
+    - exit
 
 - intent: bot_challenge
   examples: |
     - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - are you human?
+    - what are you?
+    - are you real?
+
+- intent: mood_great
+  examples: |
+    - I'm feeling great
+    - I'm doing well
+    - fantastic
+    - couldn't be better
+    - I'm good
+
+- intent: mood_unhappy
+  examples: |
+    - I'm feeling sad
+    - not so good
+    - I'm unhappy
+    - I've had better days
+    - feeling down
