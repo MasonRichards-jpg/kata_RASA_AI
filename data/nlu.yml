@@ -18,13 +18,16 @@ nlu:
     - good afternoon
 
 
+
+
 - intent: search_flight
   examples: |
     - I want to book a flight from [JFK](departure_id) to [LAX](arrival_id) on [2024-12-01](outbound_date) returning on [2024-12-10](return_date)
-    - Show me flights from [ATL](departure_id) to [ORD](arrival_id)
-    - Find flights leaving on [2024-11-30](outbound_date)
-    - Can you get me a flight from [SFO](departure_id) to [MIA](arrival_id)?
-    - I need a flight from [LGA](departure_id) to [DFW](arrival_id) on [2024-12-15](outbound_date)
+    - Show me flights from [ATL](departure_id) to [ORD](arrival_id) leaving [2024-11-30](outbound_date) coming back on [2024-12-05](return_date)
+    - Find round-trip flights from [SFO](departure_id) to [MIA](arrival_id) departing [2024-12-05](outbound_date) and returning [2024-12-12](return_date)
+    - I need a flight from [LGA](departure_id) to [DFW](arrival_id) on [2024-12-15](outbound_date) with a return on [2024-12-20](return_date)
+    - Book me a flight from [PEK](departure_id) to [AUS](arrival_id) leaving [2024-11-30](outbound_date) and back on [2024-12-06](return_date)
+
 
 
 - intent: goodbye
