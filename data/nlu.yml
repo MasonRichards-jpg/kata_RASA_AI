@@ -4,6 +4,7 @@ nlu:
 - intent: search_flight
   examples: |
     - I want to book a flight from [JFK](departure_id) to [LAX](arrival_id) on [2024-12-01](outbound_date) returning on [2024-12-10](return_date)
+    - Give me a flight from [NRT](departure_id) to [OGG](arrival_id) on [2024-12-04](outbound_date) to [2024-12-12](return_date)
     - Show me flights from [ATL](departure_id) to [ORD](arrival_id) leaving on [2024-11-30](outbound_date) and coming back on [2024-12-07](return_date)
     - Find flights from [SFO](departure_id) to [MIA](arrival_id) departing [2024-12-05](outbound_date) and returning [2024-12-12](return_date)
     - Can you get me a flight from [LGA](departure_id) to [DFW](arrival_id) on [2024-12-15](outbound_date) returning [2024-12-22](return_date)
@@ -33,6 +34,9 @@ nlu:
     - Book flights from [BWI](departure_id) to [TPA](arrival_id) leaving [2024-12-10](outbound_date) and returning [2024-12-17](return_date)
     - Need tickets from [MDW](departure_id) to [FLL](arrival_id) on [2024-12-11](outbound_date) returning [2024-12-18](return_date)
     - Get me a flight from [DCA](departure_id) to [PDX](arrival_id) departing [2024-12-12](outbound_date) and returning [2024-12-19](return_date)
+    - I want to book a flight departing from [JFK](departure_id) to [ORD](arrival_id) on [2024-12-04](outbound_date) to [2024-12-12](return_date)
+    - Flight departing from [JFK](departure_id) to [ORD](arrival_id) on [2024-12-04](outbound_date) returning on [2024-12-12](return_date)
+    - Can you find flights departing from [JFK](departure_id) to [ORD](arrival_id) leaving [2024-12-04](outbound_date) and returning [2024-12-12](return_date)
 
 - regex: airport_code
   examples: |
