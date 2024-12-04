@@ -1,0 +1,14 @@
+[
+  {
+    "name": "airport_code",
+    "pattern": "[A-Z]{3}"
+  },
+  {
+    "name": "departure_id",
+    "pattern": "(\\bJFK\\b|\\bLAX\\b|\\bATL\\b|\\bORD\\b|\\bSFO\\b|\\bMIA\\b|\\bLGA\\b|\\bDFW\\b|\\bPEK\\b|\\bAUS\\b|\\bNRT\\b|\\bHND\\b|\\bKIX\\b|\\bCDG\\b|\\bLHR\\b|\\bSYD\\b|\\bAKL\\b|\\bMKE\\b|\\bDXB\\b|\\bSIN\\b|\\bFRA\\b|\\bAMS\\b|\\bMEX\\b|\\bYYZ\\b|\\bGRU\\b|\\bEZE\\b|\\bHKG\\b|\\bBKK\\b|\\bJNB\\b|\\bCAI\\b|\\bICN\\b|\\bSVO\\b|\\bIST\\b|\\bLAS\\b|\\bSEA\\b|\\bDEN\\b|\\bBOS\\b|\\bPHX\\b|\\bMSP\\b|\\bDTW\\b|\\bSLC\\b|\\bCLT\\b|\\bMCO\\b|\\bIAH\\b|\\bPHL\\b|\\bSAN\\b|\\bBWI\\b|\\bTPA\\b|\\bMDW\\b|\\bFLL\\b|\\bDCA\\b|\\bPDX\\b)"
+  },
+  {
+    "name": "arrival_id",
+    "pattern": "(\\bJFK\\b|\\bLAX\\b|\\bATL\\b|\\bORD\\b|\\bSFO\\b|\\bMIA\\b|\\bLGA\\b|\\bDFW\\b|\\bPEK\\b|\\bAUS\\b|\\bNRT\\b|\\bHND\\b|\\bKIX\\b|\\bCDG\\b|\\bLHR\\b|\\bSYD\\b|\\bAKL\\b|\\bDXB\\b|\\bSIN\\b|\\bFRA\\b|\\bAMS\\b|\\bMEX\\b|\\bYYZ\\b|\\bGRU\\b|\\bEZE\\b|\\bHKG\\b|\\bBKK\\b|\\bJNB\\b|\\bCAI\\b|\\bICN\\b|\\bSVO\\b|\\bIST\\b|\\bLAS\\b|\\bSEA\\b|\\bDEN\\b|\\bBOS\\b|\\bPHX\\b|\\bMSP\\b|\\bDTW\\b|\\bSLC\\b|\\bCLT\\b|\\bMCO\\b|\\bIAH\\b|\\bPHL\\b|\\bSAN\\b|\\bBWI\\b|\\bTPA\\b|\\bMDW\\b|\\bFLL\\b|\\bDCA\\b|\\bPDX\\b)"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-airport_code",
+      "2": "I-airport_code",
+      "3": "L-airport_code",
+      "4": "U-airport_code",
+      "5": "B-arrival_id",
+      "6": "I-arrival_id",
+      "7": "L-arrival_id",
+      "8": "U-arrival_id",
+      "9": "B-departure_id",
+      "10": "I-departure_id",
+      "11": "L-departure_id",
+      "12": "U-departure_id",
+      "13": "B-outbound_date",
+      "14": "I-outbound_date",
+      "15": "L-outbound_date",
+      "16": "U-outbound_date",
+      "17": "B-return_date",
+      "18": "I-return_date",
+      "19": "L-return_date",
+      "20": "U-return_date",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-airport_code": 1,
+      "I-airport_code": 2,
+      "L-airport_code": 3,
+      "U-airport_code": 4,
+      "B-arrival_id": 5,
+      "I-arrival_id": 6,
+      "L-arrival_id": 7,
+      "U-arrival_id": 8,
+      "B-departure_id": 9,
+      "I-departure_id": 10,
+      "L-departure_id": 11,
+      "U-departure_id": 12,
+      "B-outbound_date": 13,
+      "I-outbound_date": 14,
+      "L-outbound_date": 15,
+      "U-outbound_date": 16,
+      "B-return_date": 17,
+      "I-return_date": 18,
+      "L-return_date": 19,
+      "U-return_date": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  },
+  {
+    "tag_name": "role",
+    "ids_to_tags": {
+      "1": "B-arrival",
+      "2": "I-arrival",
+      "3": "L-arrival",
+      "4": "U-arrival",
+      "5": "B-departure",
+      "6": "I-departure",
+      "7": "L-departure",
+      "8": "U-departure",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-arrival": 1,
+      "I-arrival": 2,
+      "L-arrival": 3,
+      "U-arrival": 4,
+      "B-departure": 5,
+      "I-departure": 6,
+      "L-departure": 7,
+      "U-departure": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
