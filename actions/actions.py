@@ -78,6 +78,11 @@ class ActionGetFlight(Action):
         arrival_id = tracker.get_slot("arrival_id")
         outbound_date = tracker.get_slot("outbound_date")
         return_date = tracker.get_slot("return_date")
+        
+        print("Departure ID:", departure_id)
+        print("Arrival ID:", arrival_id)
+        print("Outbound Date:", outbound_date)
+        print("Return Date:", return_date)
 
         if not departure_id or not arrival_id or not outbound_date:
             dispatcher.utter_message(text="Please provide complete flight details.")
@@ -95,11 +100,13 @@ class ActionGetFlight(Action):
             "hl": "en",
             "api_key": "f506b14c2ebeac4812c4ea82d326474cd9a7de1726ddc7f47ce2db901d7c474e"
                 }
+        print("API Parameters:", params)
+
         try:
             # Perform the API search
             search = GoogleSearch(params)
             results = search.get_dict()
-
+            print("API Response:", results)
             # Extract flight information
             best_flight = results['best_flights'][0]
             if "best_flights" not in results or not results["best_flights"]:
