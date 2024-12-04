@@ -18,16 +18,14 @@ class ActionGetFlight(Action):
         outbound_date = tracker.get_slot("outbound_date")
         return_date = tracker.get_slot("return_date")
         
-        # Debugging: Print slot values
         print("Departure ID:", departure_id)
         print("Arrival ID:", arrival_id)
         print("Outbound Date:", outbound_date)
         print("Return Date:", return_date)
 
-        # Process date entities if using Duckling
         def process_date_entity(date_entity):
             if isinstance(date_entity, dict) and 'value' in date_entity:
-                return date_entity['value'][:10]  # Extract 'YYYY-MM-DD'
+                return date_entity['value'][:10]  
             return date_entity
 
         outbound_date = process_date_entity(outbound_date)
@@ -50,24 +48,20 @@ class ActionGetFlight(Action):
         print("API Parameters:", params)
 
         try:
-            # Perform the API search
             search = GoogleSearch(params)
             results = search.get_dict()
             print("API Response:", results)
 
-            # Check if 'best_flights' is in the response
             if "best_flights" not in results or not results["best_flights"]:
                 dispatcher.utter_message(text="No flights found for your criteria.")
                 return []
 
-            # Extract flight information
             best_flight = results['best_flights'][0]
             airline = best_flight['flights'][0]['airline']
             price = best_flight['price']
             departure_time = best_flight['flights'][0]['departure_airport']['time']
             arrival_time = best_flight['flights'][0]['arrival_airport']['time']
 
-            # Format and send the response
             message = (
                 f"Flight found:\n"
                 f"Airline: {airline}\n"
@@ -78,7 +72,6 @@ class ActionGetFlight(Action):
             dispatcher.utter_message(text=message)
 
         except Exception as e:
-            # Handle errors gracefully
             dispatcher.utter_message(text=f"Failed to fetch flight details: {e}")
 
         return []
