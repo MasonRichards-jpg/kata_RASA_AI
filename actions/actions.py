@@ -3,7 +3,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from serpapi import GoogleSearch
 from rasa_sdk.events import SlotSet
-from apikey import apikeyy
+from .apikey import apikeyy
+from .timestuff import convert
 
 class ActionGetFlight(Action):
     def name(self) -> Text:
@@ -67,8 +68,8 @@ class ActionGetFlight(Action):
                 f"Flight found:\n"
                 f"Airline: {airline}\n"
                 f"Price: {price}\n"
-                f"Departure Time: {departure_time}\n"
-                f"Arrival Time: {arrival_time}"
+                f"Departure Time: {convert(departure_time)}\n"
+                f"Arrival Time: {convert(arrival_time)}"
             )
             dispatcher.utter_message(text=message)
 
