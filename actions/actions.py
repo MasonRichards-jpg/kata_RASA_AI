@@ -43,7 +43,7 @@ class ActionGetFlight(Action):
             "return_date": return_date,
             "currency": "USD",
             "hl": "en",
-            "api_key": "f506b14c2ebeac4812c4ea82d326474cd9a7de1726ddc7f47ce2db901d7c474e"
+            "api_key": ""
         }
         print("API Parameters:", params)
 
