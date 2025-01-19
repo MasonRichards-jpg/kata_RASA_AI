@@ -3,6 +3,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from serpapi import GoogleSearch
 from rasa_sdk.events import SlotSet
+from apikey import apikeyy
 
 class ActionGetFlight(Action):
     def name(self) -> Text:
@@ -43,7 +44,7 @@ class ActionGetFlight(Action):
             "return_date": return_date,
             "currency": "USD",
             "hl": "en",
-            "api_key": ∑
+            "api_key": apikeyy
         }
         print("API Parameters:", params)
 
