@@ -43,7 +43,7 @@ class ActionGetFlight(Action):
             "return_date": return_date,
             "currency": "USD",
             "hl": "en",
-            "api_key": ""
+            "api_key": ∑
         }
         print("API Parameters:", params)
 
