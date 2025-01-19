@@ -72,7 +72,6 @@ class ActionGetFlight(Action):
             dispatcher.utter_message(text=message)
 
         except Exception as e:
-            # Handle errors gracefully
             dispatcher.utter_message(text=f"Failed to fetch flight details: {e}")
 
         return []
